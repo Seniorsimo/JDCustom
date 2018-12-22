@@ -6,120 +6,159 @@
 @author         Me
 ==/UserStyle== */
 @-moz-document domain("jdownloader.org") {
-    header {
-        height: 30px;
+    /* header bar */
+    header,
+    header #logo,
+    .mainNavButton,
+    .moreButton,
+    .listRow > div > div,
+    .listHeader > div,
+    .contentContainer{
+        height: 30px !important;
+        border: 0px;
     }
     header #logo {
-        height: 30px;
         width: 120px;
-        background: url(../images/logo.png) left center/100% no-repeat;
     }
     .contentContainer,
-    .mainnav {
+    .mainnav,
+    .GHS0TFHBV .listHeadingWrapper,
+    .GHS0TFHLV .listHeadingWrapper{
         width: 100% !important;
     }
     .GHS0TFHBV .listHeadingWrapper,
     .GHS0TFHLV .listHeadingWrapper {
-        width: 100% !important;
         margin-left: 0px;
-        /*display: flex;*/
+    }
+    .mainNavButton img,
+    .moreButton img{
+        height: 18px !important;
+        margin-top: -4px;
+    }
+    .mainNavButton,
+    .moreButton{
+        line-height: 22px;
+    }
+    .moreButton{
+        padding: 4px 8px !important;
+        width: 32px !important;
+    }
+    .mainNavButton{
+        padding: 6px 8px 2px 8px !important;
+    }
+    #currentSpeedContainer p,
+    #currentSpeedContainer p b,
+    .mainNavButton,
+    .moreButton img{
+         margin: 0px !important;
     }
     #currentSpeedContainer br {
         display: none;
     }
-    #currentSpeedContainer p {
-        margin: 0px;
-        padding: 8px 0px 4px 0px;
-        font-size: 1em;
-    }
-    #currentSpeedContainer p b {
+    #currentSpeedContainer p,
+    #currentSpeedContainer p b{
         font-size: 1.4em !important;
+        padding: 8px 0px 4px 0px;
     }
-    .mainNavButton {
-        height: 30px !important;
-        padding: 4px 8px !important;
-        margin: 0px 0px !important;
-    }
-    .mainNavButton img {
-        height: 14px !important;
-    }
-    .moreButton {
-        padding: 5px 0px !important;
-        height: 30px !important;
-        width: 26px !important;
-    }
-    .moreButton img {
-        margin-top: 0px !important;
-        height: 20px !important
-    }
+    
+    /* Main container */
     #gwtContent {
-        padding: 44px 0px 88px 0px !important;
+        padding: 30px 0px 60px 0px !important;
     }
-    .listRow {
-        padding: 0px;
+    .GHS0TFHBV>.listHeadingWrapper,
+    .GHS0TFHBV>.listHeadingBumper,
+    .GHS0TFHLV>.listHeadingWrapper,
+    .GHS0TFHLV>.listHeadingBumper{
+        margin: 0px;
+        height: 32px;
     }
-    .listRow > div > div,
-    .listHeader > div {
-        float: right !important;
-        padding: 0px 4px !important;
-        height: 30px !important;
+    .GHS0TFHBV>.listFooterBumper,
+    .GHS0TFHLV>.listFooterBumper{
+        height: 64px;
     }
-    .listRow > div > div:last-child {
-        display: none;
-    }
-    .listRow > div > div > div {
-        padding: 0px !important;
-    }
-    .listRow > div > div:nth-child(1),
-    .listHeader > div:nth-child(1) {
-        width: 60px !important;
-        float: left !important;
-    }
-    .listRow > div > div:nth-child(2),
-    .listHeader > div:nth-child(2) {
-        width: auto !important;
-        float: left !important;
-    }
-    .listRow > div > div:nth-child(3),
-    .listHeader > div:nth-child(3) {
-        width: 110px !important;
-    }
-    .listRow > div > div:nth-child(4),
-    .listHeader > div:nth-child(4) {
-        width: 60px !important;
-    }
-    .listRow > div > div:nth-child(5) {
-        width: 100px !important;
-    }
-    .listRow > div > div:nth-child(6) {
-        width: 300px !important;
-    }
-    .listHeader > div:nth-child(5) {
-        width: 400px !important;
-    }
-    .listRow > div > div:nth-child(7),
-    .listHeader > div:nth-child(6) {
-        width: 100px !important;
-    }
-    progress {
-        height: 16px;
-    }
-    .progressBarLabel {
-        margin-top: -32px;
-        margin-bottom: 4px;
-        height: 26px;
-    }
+    
+    /* footer */
     footer {
         text-align: center;
+        height: 32px;
     }
-    .footerBar {
-        padding-top: 0px;
-    }
+    
     .listFooter {
         display: block !important;
         width: 100% !important;
         margin-left: 0px !important;
         left: 0% !important;
+        border-bottom: 0px;
+        height: 32px;
+        padding: 2px 4px !important;
+        bottom: 30px !important;
+    }
+    .footerBar {
+        padding-top: 0px;
+    }
+    
+    .downloadStats .statsEntry,
+    .linkStats .statsEntry {
+        padding:0px;
+        width: 160px;
+    }
+    .downloadStats .statsEntry .statsLabel,
+    .linkStats .statsEntry .statsLabel {
+        display: none;
+    }
+    .statsWrapper{
+        height: 26px !important;
+    }
+    .downloadStats .statsEntry .statsValue,
+    .linkStats .statsEntry .statsValue {
+        width:100%;
+        padding: 0px;
+    }
+    .downloadStats .statsEntry .statsValue::before,
+    .linkStats  .statsEntry .statsValue::before {
+        font-weight: 600;
+    }
+    .downloadStats .statsEntry:nth-child(1) .statsValue::before {
+        content: 'Pack.es:';
+    }
+    .downloadStats .statsEntry:nth-child(2) .statsValue::before {
+        content: 'Total:';
+    }
+    .downloadStats .statsEntry:nth-child(3) .statsValue::before {
+        content: 'Dow..ed:';
+    }
+    .downloadStats .statsEntry:nth-child(4) .statsValue::before {
+        content: 'Running:';
+    }
+    .downloadStats .statsEntry:nth-child(5) .statsValue::before {
+        content: 'Links:';
+    }
+    .downloadStats .statsEntry:nth-child(6) .statsValue::before {
+        content: 'Speed:';
+    }
+    .downloadStats .statsEntry:nth-child(7) .statsValue::before {
+        content: 'ETA:';
+    }
+    .downloadStats .statsEntry:nth-child(8) .statsValue::before {
+        content: 'Conn..n:';
+    }
+    .linkStats .statsEntry:nth-child(1) .statsValue::before {
+        content: 'Pack.es:';
+    }
+    .linkStats .statsEntry:nth-child(2) .statsValue::before {
+        content: 'Total:';
+    }
+    .linkStats .statsEntry:nth-child(3) .statsValue::before {
+        content: 'Unknown:';
+    }
+    .linkStats .statsEntry:nth-child(4) .statsValue::before {
+        content: 'Links:';
+    }
+    .linkStats .statsEntry:nth-child(5) .statsValue::before {
+        content: 'Online:';
+    }
+    .linkStats .statsEntry:nth-child(6) .statsValue::before {
+        content: 'Offline:';
     }
     .footerbarActions {
         flex-direction: row !important;
@@ -134,9 +173,116 @@
     #footerbarIndicators {
         padding-top: 4px !important;
     }
-    .statsWrapper {
-        height: auto !important;
+    
+    /* tutte le liste */
+    progress {
+        height: 16px;
     }
+    .progressBarLabel {
+        margin-top: -32px;
+        margin-bottom: 4px;
+        height: 26px;
+    }
+    .listRow {
+        padding: 0px;
+    }
+    .listHeader {
+        width: 100%;
+    }
+    .listHeader > div {
+        padding: 0px 4px !important;
+    }
+    
+    /* lista in download */
+    .GHS0TFHBV .listRow > div > div,
+    .GHS0TFHBV .listHeader > div {
+        float: right !important;
+    }
+    .GHS0TFHBV .listHeader > div:nth-child(1),
+    .GHS0TFHBV .listRow> div > div:nth-child(1){
+        width: 4% !important;
+        float: left !important;
+    }
+    .GHS0TFHBV .listHeader > div:nth-child(2),
+    .GHS0TFHBV .listRow> div > div:nth-child(2){
+        width: 44% !important;
+        float: left !important;
+    }
+    .GHS0TFHBV .listHeader > div:nth-child(3),
+    .GHS0TFHBV .listRow> div > div:nth-child(3){
+        width: 8% !important;
+    }
+    .GHS0TFHBV .listHeader > div:nth-child(4),
+    .GHS0TFHBV .listRow> div > div:nth-child(4){
+        width: 4% !important;
+    }
+    .GHS0TFHBV .listHeader > div:nth-child(5){
+        width: 30 !important;
+        float: left !important;
+    }
+    .GHS0TFHBV .listRow> div > div:nth-child(5){
+        width: 2% !important;
+        float: left !important;
+    }
+    .GHS0TFHBV .listRow> div > div:nth-child(6){
+        width: 18% !important;
+        float: left !important;
+    }
+    .GHS0TFHBV .listHeader > div:nth-child(6),
+    .GHS0TFHBV .listRow> div > div:nth-child(7){
+        width: 6% !important;
+    }
+    .GHS0TFHBV .listRow> div > div:nth-child(8){
+        width: 2% !important;
+    }
+    .GHS0TFHBV .listRow> div > div:nth-child(9){
+        width: 2% !important;
+    }
+    .GHS0TFHBV .listRow > div > div:last-child {
+        display: none;
+    }
+    
+    /* lista link */
+    .GHS0TFHLV .listRow > div > div,
+    .GHS0TFHLV .listHeader > div {
+        float: right !important;
+    }
+    .GHS0TFHLV .listHeader > div:nth-child(1),
+    .GHS0TFHLV .listRow> div > div:nth-child(1){
+        width: 4% !important;
+        float: left !important;
+    }
+    .GHS0TFHLV .listHeader > div:nth-child(2),
+    .GHS0TFHLV .listRow> div > div:nth-child(2){
+        width: 34% !important;
+        float: left !important;
+    }
+    .GHS0TFHLV .listHeader > div:nth-child(3),
+    .GHS0TFHLV .listRow> div > div:nth-child(3){
+        width: 40% !important;
+        float: left !important;
+    }
+    .GHS0TFHLV .listHeader > div:nth-child(4),
+    .GHS0TFHLV .listRow> div > div:nth-child(4){
+        width: 8% !important;
+    }
+    .GHS0TFHLV .listHeader > div:nth-child(5),
+    .GHS0TFHLV .listRow> div > div:nth-child(5){
+        width: 4% !important;
+    }
+    .GHS0TFHLV .listHeader > div:nth-child(6),
+    .GHS0TFHLV .listRow> div > div:nth-child(6){
+        width: 6% !important;
+    }
+    .GHS0TFHLV .listRow> div > div:nth-child(7){
+        width: 2% !important;
+    }
+    .GHS0TFHLV .listRow> div > div:nth-child(8){
+        width: 2% !important;
+    }
+
+    
+    /* Extra */
     .GHS0TFHKT {
         width: 10% !important;
         padding-left: 4px;
