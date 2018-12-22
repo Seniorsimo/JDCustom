@@ -1,0 +1,12 @@
+/* ==UserStyle==
+@name         Example UserCSS style
+@namespace    github.com/openstyles/stylus
+@version      1.0.0
+@license      unlicense
+@preprocessor default
+@var color link-color "Link Color" red
+==/UserStyle== */
+
+body {
+    background: red;
+}
