@@ -1,14 +1,12 @@
 /* ==UserStyle==
-@name         MyJDCustomCSS
-@namespace    jdownloader.org
-@version      1.0.0
-@license      unlicense
-@preprocessor default
+@name           MyJDCustomCSS
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    New Custom style for wide screen and JD
+@author         Me
 ==/UserStyle== */
-
-body {
-    background: red;
-    
-    
-    
+@-moz-document domain("jdownloader.org") {
+    body {
+        background: red;
+    }
 }
